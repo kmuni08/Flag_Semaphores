@@ -4,16 +4,26 @@ from time import sleep
 
 semaphore = {
     "A": (225, -90),
+    "1": (225, -90),
     "B": (180, -90),
+    "2": (180, -90),
     "C": (135, -90),
+    "3": (135, -90),
     "D": (90, -90),
+    "4": (90, -90),
     "E": (-90, 45),
+    "5": (-90, 45),
     "F": (-90, 0),
+    "6": (-90, 0),
     "G": (-90, -45),
+    "7": (-90, -45),
     "H": (180, 225),
+    "8": (180, 225),
     "I": (135, 225),
+    "9": (135, 225),
     "J": (90, 0),
     "K": (225, 90),
+    "0": (225, 90),
     "L": (225, 45),
     "M": (225, 0),
     "N": (225, -45),
@@ -35,7 +45,8 @@ semaphore = {
 semaphore_phrases = {
     "ERROR": ((135, 45), (225, -45)),
     "CANCEL": (135, -45),
-    "NUMERALS": (90, 45)
+    "NUMERALS": (90, 45),
+    "LETTERS": (90, 0)
 }
 
 myPen = Turtle()
@@ -43,7 +54,7 @@ window = turtle.Screen()
 window.bgcolor("white")
 draw_signalman(myPen)
 
-message = "NUMERALS"
+message = "1A2B"
 
 if message != "ERROR" and message != "CANCEL" and message != "NUMERALS":
     for letter in message:
